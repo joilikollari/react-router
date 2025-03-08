@@ -3,6 +3,7 @@
  import AboutUs from "./pages/aboutUs";
  import HomePage from "./pages/HomePage";
  import DefoultLayout from "./layouts/Defoultlayout";
+ import SinglePost from "./pages/SinglePost";
 
 function App() {
   
@@ -11,11 +12,12 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Rout Component={DefoultLayout}>
-            <Rout path="/" Component={HomePage} />
-            <Rout path="/about-us" Component={AboutUs} />
-            <Rout path="/posts-list" Component={PostsList} />
-            </Rout>
+          <Route Component={DefoultLayout}>
+            <Route path="/" Component={HomePage} />
+            <Route path="/about-us" Component={AboutUs} />
+            <Route path="/posts-list" Component={PostsList} />
+            <Route path="/posts/:id" Component={PostsList} />
+            </Route>
         </Routes>
       </BrowserRouter>
        
